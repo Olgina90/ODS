@@ -1,4 +1,4 @@
-import { Meta } from "@storybook/react";
+import { Meta, StoryObj } from "@storybook/react";
 import Image from ".";
 
 const meta: Meta<typeof Image> = {
@@ -8,4 +8,8 @@ const meta: Meta<typeof Image> = {
 
 export default meta
 
-export const Default = {}
+type Story = StoryObj<typeof meta>;
+
+export const Default: Story = {
+    args: {}
+}
