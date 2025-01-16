@@ -1,13 +1,10 @@
 import { ChipWrapper, ChipWrapperProps } from './styled'
 
-type ChipProps = ChipWrapperProps
+type ChipProps = ChipWrapperProps & {
+  className?: string
+  label: string
+}
 
-export default function Chip({ backgroundColor, padding, border }: ChipProps) {
-  return (
-    <ChipWrapper
-      backgroundColor={backgroundColor}
-      padding={padding}
-      border={border}
-    >Chip</ChipWrapper>
-  )
+export default function Chip({ className, label, variant}: ChipProps) {
+  return <ChipWrapper className={className} variant={variant}>{label}</ChipWrapper>
 }

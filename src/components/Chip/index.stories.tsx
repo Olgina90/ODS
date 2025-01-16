@@ -5,9 +5,8 @@ const meta: Meta<typeof Chip> = {
   title: 'components/Chip',
   component: Chip,
   args: {
-    backgroundColor: '#000',
-    padding: '6px 12px',
-    border: 'solid 1px grey',
+    label: 'Label',
+    variant: 'Filled',
   },
 }
 
@@ -17,3 +16,5 @@ type Story = StoryObj<typeof meta>
 export const Default: Story = {
   args: {},
 }
+
+//devo fare stories per Filled and Outlined
