@@ -1,8 +1,6 @@
 import newStyled from '@emotion/styled'
 import { CSSProperties } from 'react'
 
-
-
 export type TextWrapperProps = {
   color?: string
   fontSize?: CSSProperties['fontSize']
