@@ -1,5 +1,8 @@
 import { PropsWithChildren } from 'react'
-import { TextWrapper, TextWrapperProps } from '../../../components/Text/styled'
+import {
+  TextWrapper,
+  TextWrapperProps,
+} from '../../../../components/Text/styled'
 
 type TextProps = PropsWithChildren<
   {
@@ -16,7 +19,12 @@ export default function Text({
   className,
 }: TextProps) {
   return (
-    <TextWrapper as={tag} color={color} fontSize={fontSize} className={className}>
+    <TextWrapper
+      as={tag}
+      color={color}
+      fontSize={fontSize}
+      className={className}
+    >
       {children}
     </TextWrapper>
   )

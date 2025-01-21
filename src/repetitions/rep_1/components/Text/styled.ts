@@ -6,7 +6,7 @@ export type TextWrapperProps = {
   fontSize?: CSSProperties['fontSize']
 }
 
-export const TextWrapper = newStyled('span')<TextWrapperProps>`
+export const Rep1_TextWrapper = newStyled('span')<TextWrapperProps>`
     color: ${({ color }) => color || 'inherit'};
-    font-size: ${({ fontSize }) => fontSize || 'inherit'};
+    font-size: ${({ fontSize }) => fontSize || 'inherit'}
 `

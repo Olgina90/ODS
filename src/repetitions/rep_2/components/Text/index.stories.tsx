@@ -1,8 +1,8 @@
 import { Meta, StoryObj } from '@storybook/react/*'
-import Text from '../../../components/Text'
+import Text from '../../../../components/Text'
 
 const meta: Meta<typeof Text> = {
-  title: 'rep_1/components/Text',
+  title: 'rep_2/components/Text',
   component: Text,
   args: {
     tag: 'span',
@@ -18,7 +18,7 @@ type Story = StoryObj<typeof meta>
 export const Default: Story = {
   args: {
     tag: 'b',
-    children: 'The text should be bolt',
+    children: 'The text is bolt',
   },
 }
 
@@ -34,7 +34,7 @@ export const LargeText: Story = {
   args: {
     tag: 'div',
     fontSize: '24px',
-    children: 'The text is large',
+    children: 'The text is Large',
   },
 }
 
@@ -44,8 +44,7 @@ export const Paragraph: Story = {
     color: '#000',
     children: (
       <Text tag={'span'}>
-        {'My name is '}
-        <Text tag={'b'}>{'Olga'}</Text>
+        {'My name is'} <Text tag={'b'}>{'Olga'}</Text>
         {", and I'm"} <Text tag={'b'}>{'34'}</Text>
       </Text>
     ),

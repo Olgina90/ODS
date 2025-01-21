@@ -1,0 +1,41 @@
+{
+  "plugins": ["boundaries"],
+  "settings": {
+    "boundaries/include": ["src/**/*"],
+    "boundaries/elements": [
+      {
+        "mode": "full",
+        "type": "main",
+        "pattern": ["src/**/*", "!src/repetitions/**/*"]
+      },
+      {
+        "mode": "full",
+        "type": "repetitions",
+        "capture": ["repetitionName"],
+        "pattern": ["src/repetitions/*/**/*"]
+      }
+    ]
+  },
+  "rules": {
+    "boundaries/no-unknown": ["error"],
+    "boundaries/no-unknown-files": ["error"],
+    "boundaries/element-types": [
+      "error",
+      {
+        "default": "disallow",
+        "rules": [
+          {
+            "from": ["main"],
+            "allow": ["main"]
+          },
+          {
+            "from": ["repetition"],
+            "allow": [
+              ["repetition", { "repetitionName": "${from.repetitionName}" }]
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}
