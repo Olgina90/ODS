@@ -8,5 +8,5 @@ export type Rep1_TextWrapperProps = {
 
 export const Rep1_TextWrapper = newStyled('span')<Rep1_TextWrapperProps>`
     color: ${({ color }) => color || 'inherit'};
-    font-size: ${({ fontSize }) => fontSize || 'inherit'}
+    font-size: ${({ fontSize }) => fontSize || 'inherit'};
 `
