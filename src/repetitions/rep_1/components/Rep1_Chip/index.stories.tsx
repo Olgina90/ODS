@@ -1,9 +1,9 @@
 import { Meta, StoryObj } from '@storybook/react/*'
-import Chip from '../../../../components/Chip'
+import Rep1_Chip from '.'
 
-const meta: Meta<typeof Chip> = {
-  title: 'rep_1/components/Chip',
-  component: Chip,
+const meta: Meta<typeof Rep1_Chip> = {
+  title: 'rep_1/components/Rep1_Chip',
+  component: Rep1_Chip,
   args: {
     label: 'Label',
     variant: 'Filled',

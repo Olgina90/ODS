@@ -1,9 +1,9 @@
 import { Meta, StoryObj } from '@storybook/react/*'
-import Chip from '../../../../components/Chip'
+import Rep2_Chip from '.'
 
-const meta: Meta<typeof Chip> = {
-  title: 'rep_2/components/Chip',
-  component: Chip,
+const meta: Meta<typeof Rep2_Chip> = {
+  title: 'rep_2/components/Rep2_Chip',
+  component: Rep2_Chip,
   args: {
     label: 'Label',
     variant: 'Filled',
@@ -19,14 +19,14 @@ export const Default: Story = {
 
 export const Outlined: Story = {
   args: {
+    label: 'Chip Outlined',
     variant: 'Outlined',
-    label: 'Label Outlined',
   },
 }
 
 export const Filled: Story = {
   args: {
+    label: 'Chip Filled',
     variant: 'Filled',
-    label: 'Label Filled',
   },
 }

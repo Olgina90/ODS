@@ -1,29 +1,29 @@
 import { PropsWithChildren } from 'react'
-import { TextWrapper } from './styled'
-import { TextWrapperProps } from '../../../../components/Text/styled'
 
-type TextProps = PropsWithChildren<
+import { Rep1_TextWrapper, Rep1_TextWrapperProps } from './styled'
+
+type Rep1_TextProps = PropsWithChildren<
   {
     tag?: 'span' | 'b' | 'p' | 'div'
     className?: string
-  } & TextWrapperProps
+  } & Rep1_TextWrapperProps
 >
 
-export default function Text({
+export default function Rep1_Text({
   children,
   tag = 'span',
   color,
   fontSize,
   className,
-}: TextProps) {
+}: Rep1_TextProps) {
   return (
-    <TextWrapper
+    <Rep1_TextWrapper
       as={tag}
       color={color}
       fontSize={fontSize}
       className={className}
     >
       {children}
-    </TextWrapper>
+    </Rep1_TextWrapper>
   )
 }

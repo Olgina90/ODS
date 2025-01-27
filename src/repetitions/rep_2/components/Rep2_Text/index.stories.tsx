@@ -1,9 +1,9 @@
-import { Meta, StoryObj } from '@storybook/react/*'
-import Text from '../../../../components/Text'
+import { composeStory, Meta, StoryObj } from '@storybook/react/*'
+import Rep2_Text from '.'
 
-const meta: Meta<typeof Text> = {
-  title: 'rep_1/components/Text',
-  component: Text,
+const meta: Meta<typeof Rep2_Text> = {
+  title: 'rep_2/components/Rep2_Text',
+  component: Rep2_Text,
   args: {
     tag: 'span',
     color: '#000',
@@ -25,8 +25,8 @@ export const Default: Story = {
 export const CustomColor: Story = {
   args: {
     tag: 'p',
-    color: '#007BFF',
-    children: 'The text is blue',
+    color: '#06376d',
+    children: 'The text is dark blue',
   },
 }
 
@@ -34,7 +34,7 @@ export const LargeText: Story = {
   args: {
     tag: 'div',
     fontSize: '24px',
-    children: 'The text is large',
+    children: 'The text is Large',
   },
 }
 
@@ -43,11 +43,12 @@ export const Paragraph: Story = {
     tag: 'p',
     color: '#000',
     children: (
-      <Text tag={'span'}>
+      <Rep2_Text tag={'span'}>
         {'My name is '}
-        <Text tag={'b'}>{'Olga'}</Text>
-        {", and I'm"} <Text tag={'b'}>{'34'}</Text>
-      </Text>
+        <Rep2_Text tag={'b'}>{'Olga'}</Rep2_Text>
+        {", and I'm "}
+        <Rep2_Text tag={'b'}>{'34'}</Rep2_Text>
+      </Rep2_Text>
     ),
   },
 }

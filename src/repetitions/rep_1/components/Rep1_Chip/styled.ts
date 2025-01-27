@@ -1,14 +1,12 @@
 import newStyled from '@emotion/styled'
-import { CSSProperties } from 'react'
 import { css } from '@emotion/react'
-import Text from '../Text'
+import Rep1_Text from '../Rep1_Text'
 
-
-export type ChipWrapperProps = {
+export type Rep1_ChipWrapperProps = {
   variant?: 'Outlined' | 'Filled'
 }
 
-export const ChipWrapper = newStyled(Text)<ChipWrapperProps>`
+export const Rep1_ChipWrapper = newStyled(Rep1_Text)<Rep1_ChipWrapperProps>`
     padding: 8px 16px;
     border-radius: 20px;
     ${({ variant }) => {
@@ -22,11 +20,11 @@ export const ChipWrapper = newStyled(Text)<ChipWrapperProps>`
     }}
 `
 
-const ChipWrapperFilledStyles = css`
+const ChipWrapperOutlinedStyles = css`
   border: solid 1px #bdbdbd;
   color: #000000de;
 `
-const ChipWrapperOutlinedStyles = css`
+const ChipWrapperFilledStyles = css`
   background-color: #00000014;
   color: #000000de;
 `
