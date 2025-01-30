@@ -1,9 +1,9 @@
 import newStyled from '@emotion/styled'
 import { CSSProperties } from 'react'
 
-export type Rep1_TextWrapperProps = Pick<CSSProperties, 'color' | 'fontSize'>
+export type Rep3_TextWrapperProps = Pick<CSSProperties, 'color' | 'fontSize'>
 
-export const Rep1_TextWrapper = newStyled('span')<Rep1_TextWrapperProps>`
+export const Rep3_TextWrapper = newStyled('span')<Rep3_TextWrapperProps>`
     color: ${({ color }) => color || 'inherit'};
     font-size: ${({ fontSize }) => fontSize || 'inherit'};
 `
