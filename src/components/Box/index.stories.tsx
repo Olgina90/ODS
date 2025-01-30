@@ -1,5 +1,6 @@
 import { Meta, StoryObj } from '@storybook/react/*'
 import Box from '.'
+import Chip from '../Chip'
 
 const meta: Meta<typeof Box> = {
   title: 'components/Box',
@@ -12,8 +13,17 @@ type Story = StoryObj<typeof meta>
 
 export const Default: Story = {
   args: {
-    children: 'sfhsdfhdf',
-    margin: '30px',
-    padding: '40px',
+    children: (
+      <Box
+        display={'inherit'}
+        backgroundColor={'green'}
+        margin={'30px'}
+        padding={'40px'}
+      >
+        <Chip label={'olga'} variant={'Filled'}></Chip>
+      </Box>
+    ),
+    display: 'inline-block',
+    backgroundColor: 'orange',
   },
 }
